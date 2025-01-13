@@ -6,6 +6,7 @@ module.exports = {
       "custom-gray": "#f6f6f6",
       "add-btn": "#b59de5",
       "delete-btn": "#e8e8e8",
+      "grey": "#797979",
       "purple": "#6421d5",
       "input-purple": "#7650d7"
     },

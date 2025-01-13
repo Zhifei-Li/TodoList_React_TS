@@ -15,7 +15,9 @@ type Todo = {
   completed: boolean;
 };
 const fetchTodos = async (): Promise<Todo[]> => {
-  const response = await fetch("https://dummyjson.com/todos");
+  const response = await fetch(
+    "https://dummyjson.com/todos?limit=10"
+  );
   const data = await response.json();
   
   //get Max UserId
@@ -92,7 +94,6 @@ const updateTodo = (id: number, updatedFields: Partial<Todo>) => {
       todo.id === id ? { ...todo, ...updatedFields } : todo
     );
 
-    // 将更新后的待办项移到最前面
     const updatedTodo = updatedTodos.find((todo) => todo.id === id);
     if (updatedTodo) {
       const remainingTodos = updatedTodos.filter((todo) => todo.id !== id);

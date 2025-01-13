@@ -10,7 +10,9 @@ const Filter: React.FC<FilterProps> = ({ filter, onChange }) => {
     <select
       value={filter}
       onChange={(e) => onChange(e.target.value)}
-      className="bg-custom-gray rounded-md mt-4 w-1/6 h-10 p-2`"
+      className={`sortBy bg-custom-gray rounded-md mt-4 w-1/6 h-10 p-2 ${
+        filter === "Sort By" ? "text-grey" : "text-black"
+      }`}
     >
       <option value="Sort By" disabled>
         Sort By
