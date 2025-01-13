@@ -58,7 +58,7 @@ const TodoList: React.FC<TodoListProps> = ({ todos, onDelete, onUpdate }) => {
             onClick={handleLoadMore}
             className="mt-4 px-4 py-2 bg-blue-500 text-white rounded text-purple"
           >
-            Load More
+            Load more
           </button>
         </div>
       )}
