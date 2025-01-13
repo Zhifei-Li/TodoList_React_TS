@@ -54,7 +54,7 @@ const addTodoMutation = useMutation<Todo, Error, string>({
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ todo: text, completed: false, userId: maxUserId }),
     }).then((res) => res.json());
-    return { id: newTodo.id, text: newTodo.todo, completed: newTodo.completed };
+    return { id: maxUserId + 1, text: newTodo.todo, completed: newTodo.completed };
   },
   onSuccess: (newTodo) => {
     queryClient.setQueryData(["todos"], (oldTodos: Todo[] | undefined) => [
